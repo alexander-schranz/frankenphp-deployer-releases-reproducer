@@ -1,4 +1,6 @@
-# FrankenPHP
+# FrankenPHP Blue/Green reload issue
+
+[https://github.com/php/frankenphp/issues/2266](https://github.com/php/frankenphp/issues/2266)
 
 Install FrankenPHP with:
 
