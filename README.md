@@ -65,3 +65,19 @@ curl http://127.0.0.1:8082/test.txt
 ```bash
 curl -X POST http://localhost:2019/frankenphp/workers/restart
 ```
+
+### Workaround
+
+Replace `current` with the target `releases/1` manually:
+
+```bash
+./frankenphp adapt --config Caddyfile | sed "s|current/|$(readlink current)/|g" | curl localhost:2019/load -H "Content-Type: application/json" -d @-
+```
+
+See `reload.sh`.
+
+### Fix use reload
+
+```bash
+./frankenphp reload --force
+```
